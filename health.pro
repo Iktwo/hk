@@ -16,7 +16,9 @@ SOURCES += src/main.cpp \
     src/healthdatame.cpp \
     src/healthdata.cpp \
     src/healthdataworkout.cpp \
-    src/healthdataworkouts.cpp
+    src/healthdataworkouts.cpp \
+    src/healthdataactivitysummary.cpp \
+    src/healthdataactivitysummaries.cpp
 
 RESOURCES += resources.qrc
 
@@ -35,4 +37,6 @@ HEADERS += \
     src/healthdatame.h \
     src/healthdata.h \
     src/healthdataworkout.h \
-    src/healthdataworkouts.h
+    src/healthdataworkouts.h \
+    src/healthdataactivitysummary.h \
+    src/healthdataactivitysummaries.h

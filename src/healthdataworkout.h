@@ -2,7 +2,7 @@
 #define HEALTHDATAWORKOUT_H
 
 #include <QObject>
-#include <QDate>
+#include <QDateTime>
 
 class HealthDataWorkout : public QObject
 {
@@ -17,7 +17,7 @@ public:
     Q_PROPERTY(QString distanceUnit READ distanceUnit WRITE setDistanceUnit NOTIFY distanceUnitChanged)
     Q_PROPERTY(double energyBurned READ energyBurned NOTIFY energyBurnedChanged)
     Q_PROPERTY(QString energyBurnedUnit READ energyBurnedUnit WRITE setEnergyBurnedUnit NOTIFY energyBurnedUnitChanged)
-    Q_PROPERTY(QDate startDate READ startDate NOTIFY startDateChanged)
+    Q_PROPERTY(QDateTime startDate READ startDate NOTIFY startDateChanged)
 
     enum class HealthDataActivityType {
         Other,
@@ -42,13 +42,13 @@ public:
     QString distanceUnit() const;
     double energyBurned() const;
     QString energyBurnedUnit() const;
-    QDate startDate() const;
+    QDateTime startDate() const;
 
     void setActivityType(HealthDataActivityType activityType);
     void setDuration(double duration);
     void setDistance(double distance);
     void setEnergyBurned(double energyBurned);
-    void setStartDate(QDate startDate);
+    void setStartDate(QDateTime startDate);
     void setDurationUnit(QString durationUnit);
     void setDistanceUnit(QString distanceUnit);
     void setEnergyBurnedUnit(QString energyBurnedUnit);
@@ -68,7 +68,7 @@ private:
     double m_duration;
     double m_distance;
     double m_energyBurned;
-    QDate m_startDate;
+    QDateTime m_startDate;
     QString m_durationUnit;
     QString m_distanceUnit;
     QString m_energyBurnedUnit;

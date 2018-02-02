@@ -1,6 +1,6 @@
 #include "healthdataworkout.h"
 
-HealthDataWorkout::HealthDataWorkout(QObject *parent) : QObject(parent), m_duration(0)
+HealthDataWorkout::HealthDataWorkout(QObject *parent) : QObject(parent), m_duration(0), m_startDate(QDateTime::currentDateTime())
 {
 }
 
@@ -69,12 +69,12 @@ void HealthDataWorkout::setEnergyBurned(double energyBurned)
     emit energyBurnedChanged();
 }
 
-QDate HealthDataWorkout::startDate() const
+QDateTime HealthDataWorkout::startDate() const
 {
     return m_startDate;
 }
 
-void HealthDataWorkout::setStartDate(QDate startDate)
+void HealthDataWorkout::setStartDate(QDateTime startDate)
 {
     m_startDate = startDate;
     emit startDateChanged();
